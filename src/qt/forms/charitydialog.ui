@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>charityDialog</class>
+ <widget class="QDialog" name="charityDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>613</width>
+    <height>412</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Split Stake</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+        color: white;
+        background-color: #333333;
+        border: none;
+}
+
+QLabel {
+        background-color: transparent;
+        color: white;
+        font-weight: normal
+}
+
+QLabel[openExternalLinks=true], QHeaderView {
+        color: #aaaaaa
+}
+
+QLabel[openExternalLinks=false] {
+        color: white;
+        font-weight: normal
+}
+
+QPushButton, QToolButton {
+        border: 4px solid #000000;
+        border-radius: 4px;
+        background-color: #000000;
+        color: white;
+        padding: 4px;
+        margin: 4px;
+}
+
+QPushButton:checked, QToolButton:checked {
+        color: #AEC6CF;
+}
+
+QPushButton:pressed, QToolButton:pressed {
+        border-color: #AEC6CF;
+        color: #AEC6CF;
+}
+
+QPushButton:disabled, QToolButton:disabled {
+        color: #444;
+        background-color: #222222;
+}
+
+QLineEdit {
+        border-radius: 6px;
+        border-width: 1px;
+        border-color: #222222;
+        padding: 8px;
+        background-color: #000000;
+        color: white;
+}
+
+QLineEdit:disabled {
+        border-radius: 6px;
+        border-width: 1px;
+        border-color: #222222;
+        padding: 8px;
+        background-color: #262626;
+        color: white;
+}
+
+QSpinBox {
+        border-radius: 6px;
+        border-width: 1;
+        border-style: 222222;
+        padding: 2px;
+        background-color: #000000;
+        color: white;
+}</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>10</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Split Stake&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="scaledContents">
+    <bool>false</bool>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>60</y>
+     <width>571</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="lineWidth">
+    <number>1</number>
+   </property>
+   <property name="text">
+    <string>Split Stake Savings allows you to split your stake reward and automatically send up to 50% of your Stake to the address you specify here. Split Stake requires that the Staked Block recieve 110 confirmations before the transaction is automatically sent.</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>360</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QWidget" name="formLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>210</y>
+     <width>581</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout_2">
+    <property name="fieldGrowthPolicy">
+     <enum>QFormLayout::ExpandingFieldsGrow</enum>
+    </property>
+    <property name="horizontalSpacing">
+     <number>8</number>
+    </property>
+    <property name="verticalSpacing">
+     <number>14</number>
+    </property>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>Address to send to</string>
+      </property>
+      <property name="indent">
+       <number>4</number>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="charityAddressEdit">
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>Percentage to send</string>
+      </property>
+      <property name="indent">
+       <number>4</number>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QSpinBox" name="charityPercentEdit">
+      <property name="minimumSize">
+       <size>
+        <width>75</width>
+        <height>31</height>
+       </size>
+      </property>
+      <property name="maximum">
+       <number>50</number>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>130</y>
+     <width>561</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt;NOTE: The settings on this form are not stored in long term memory and must be set each time the wallet is started&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>360</y>
+     <width>141</width>
+     <height>37</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Stop Donating</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>charityDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>charityDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
